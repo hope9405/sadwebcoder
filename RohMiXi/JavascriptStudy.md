@@ -7,7 +7,7 @@
 ###  1-1. 콘솔 출력
 <br>
 
-####1-1-1. 터미널에서 node 로 출력
+#### 1-1-1. 터미널에서 node 로 출력
 
 아래와 같이 자바스크립트를 작성한다.
 ``` Javascript
@@ -19,7 +19,7 @@ console.log('Hello World!');
 
 <br>
 
-####1-1-2. 웹 콘솔로 출력 (Chorme)
+#### 1-1-2. 웹 콘솔로 출력 (Chorme)
 <br>
 
 아래와 같이 html 파일을 작성한다.
@@ -44,7 +44,7 @@ console.log('Hello World!');
 
 <br>
 
-###1-2. _async_ vs _defer_
+### 1-2. _async_ vs _defer_
 
 ___HTML에서 자바스크립트를 불러올 때 어떤 방식이 더 좋을까?___
 
@@ -265,5 +265,7 @@ __var__ 은  이랑 달리 __let__ 은 `block-scope` 이다.
     console.log(group);
   }
   console.log(group);
-
 ```
+![결과](C:/Users/black/Desktop/노재열/coding/javascript/jsimages/2강/6.png)
+
+만약 특정 변수를 `block` 안에서도 사용하고 싶다면 `block` 밖에서 작업하면 된다.
