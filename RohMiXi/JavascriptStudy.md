@@ -39,7 +39,7 @@ console.log('Hello World!');
 이후 html을 크롬으로 실행 시킨 후 __`ctrl + shift + i`__ 로 개발자 도구를 활성화 시킨다.
 
 개발자 도구에서 Console창을 확인한다.
-![개발자도구](C:/Users/black/Desktop/노재열/coding/javascript/jsimages/1.png "콘솔창에서 Hello world가 출력된다. 또한 h의 값을 정해주고 h를 출력하면 지정 값이 도출된다.")
+![개발자도구](C:/Users/black/Desktop/노재열/coding/javascript/jsStudy/sadwebcoder/Rohmixi/jsimages/1.png "콘솔창에서 Hello world가 출력된다. 또한 h의 값을 정해주고 h를 출력하면 지정 값이 도출된다.")
 
 
 <br>
@@ -61,7 +61,7 @@ ___HTML에서 자바스크립트를 불러올 때 어떤 방식이 더 좋을까
   <body></body>
 <html>
 ```
-![헤드에스크립트](C:/Users/black/Desktop/노재열/coding/javascript/jsimages/2.png "Parsing을 멈추고 서버에서 js 를 받음")
+![헤드에스크립트](C:/Users/black/Desktop/노재열/coding/javascript/jsStudy/sadwebcoder/Rohmixi/jsimages/2.png "Parsing을 멈추고 서버에서 js 를 받음")
 
  __위 방식의 단점은, 사용자가 웹사이트를 보기 위해 시간이 오래 걸린다.__
 
@@ -82,7 +82,7 @@ ___HTML에서 자바스크립트를 불러올 때 어떤 방식이 더 좋을까
 <html>
 ```
 
-![바디에스크립트](C:/Users/black/Desktop/노재열/coding/javascript/jsimages/3.png "parsing이 끝난 뒤 js를 받고 실행")
+![바디에스크립트](C:/Users/black/Desktop/노재열/coding/javascript/jsStudy/sadwebcoder/Rohmixi/jsimages/3.png "parsing이 끝난 뒤 js를 받고 실행")
 
 __위 방식의 단점은, 웹페이지가 js에 의존적이라면 정상적인 페이지를 보기까지 오래걸린다.__
 
@@ -104,7 +104,7 @@ __위 방식의 단점은, 웹페이지가 js에 의존적이라면 정상적인
 <html>
 ```
 
-![헤드에에이싱크](C:/Users/black/Desktop/노재열/coding/javascript/jsimages/4.png "parsing을 하다 동시에 병렬적으로 다운 후 실행")
+![헤드에에이싱크](C:/Users/black/Desktop/노재열/coding/javascript/jsStudy/sadwebcoder/Rohmixi/jsimages/4.png "parsing을 하다 동시에 병렬적으로 다운 후 실행")
 
 __body끝에 fetching 하기 보다 다운로드 받는 시간을 절약할 수 있다. 그러나 js가 HTML이 Parsing되기 전에 정의되지 않을 수 있고 페이지를 보기 전에 시간이 더 걸릴 수 있다.__
 
@@ -126,7 +126,7 @@ __body끝에 fetching 하기 보다 다운로드 받는 시간을 절약할 수 
 <html>
 ```
 
-![헤드에디퍼](C:/Users/black/Desktop/노재열/coding/javascript/jsimages/5.png "parsing 도중 병렬적 다운 후 parsing 이후 js 실행")
+![헤드에디퍼](C:/Users/black/Desktop/노재열/coding/javascript/jsStudy/sadwebcoder/Rohmixi/jsimages/5.png "parsing 도중 병렬적 다운 후 parsing 이후 js 실행")
 
 __HTML을 parsing 하는 동안 필요한 js를 받고, HTML을 모두 parsing 한 다음 js를 실행하여 사용자에게 더 빠른 컨텐츠를 제공한다.__
 
@@ -146,7 +146,7 @@ console.log("Hello World!");
 
 a = 6;
 ```
-![스트릭안해](C:/Users/black/Desktop/노재열/coding/javascript/jsimages/6.png "문제 없이 진행")
+![스트릭안해](C:/Users/black/Desktop/노재열/coding/javascript/jsStudy/sadwebcoder/Rohmixi/jsimages/6.png "문제 없이 진행")
 
 * #### use strict가 있을 시
 ```javascript
@@ -157,7 +157,7 @@ console.log("Hello World!");
 a = 6;
 ```
 
-![스트릭해](C:/Users/black/Desktop/노재열/coding/javascript/jsimages/7.png "a가 정의되지 않았다는 오류가 뜸")
+![스트릭해](C:/Users/black/Desktop/노재열/coding/javascript/jsStudy/sadwebcoder/Rohmixi/jsimages/7.png "a가 정의되지 않았다는 오류가 뜸")
 
 use strict로 인해 a의 선언오류를 확인 할 수 있다.
 이는 `let a;` 를 `a = 6;` 윗 줄에 추가하여 수정할 수 있다.
@@ -182,7 +182,7 @@ __var__ 와 __let__ 은 변수 선언 방식이다.
  age = 7;
  console.log(age);
 ```
-![결과](C:/Users/black/Desktop/노재열/coding/javascript/jsimages/2강/1.png)
+![결과](C:/Users/black/Desktop/노재열/coding/javascript/jsStudy/sadwebcoder/Rohmixi/jsimages/2강/1.png)
 
 이렇게 __var__ 를 통해 변수를 선언할 수 있다.
 그러나 __var__ 로 변수를 선언할 때, 아래와 같은 문제들이 발생할 수 있다.
@@ -198,7 +198,7 @@ __var__ 와 __let__ 은 변수 선언 방식이다.
   var name = 'jisoo' ;
   console.log(name);
 ```
-![결과](C:/Users/black/Desktop/노재열/coding/javascript/jsimages/2강/3.png)
+![결과](C:/Users/black/Desktop/노재열/coding/javascript/jsStudy/sadwebcoder/Rohmixi/jsimages/2강/3.png)
 
 위와 같이 __var__ 로 변수를 선언을 하면 이전에 무엇으로 선언하였든 상관없이 매번 변수가 새로 선언된다.
 
@@ -212,7 +212,7 @@ __var__ 와 __let__ 은 변수 선언 방식이다.
   var age;
   console.log(age);
 ```
-![결과](C:/Users/black/Desktop/노재열/coding/javascript/jsimages/2강/2.png)
+![결과](C:/Users/black/Desktop/노재열/coding/javascript/jsStudy/sadwebcoder/Rohmixi/jsimages/2강/2.png)
 
 __var__ 은 어느위치에서 변수를 선언하여도 가장 위에서 선언되는 문제가 생긴다.
 
@@ -238,7 +238,7 @@ __let__ 은 ES6부터 추가된 변수 선언 방식이다. 아래처럼 변수�
   let name = 'jisoo';
   console.log(name);
 ```
-![결과](C:/Users/black/Desktop/노재열/coding/javascript/jsimages/2강/4.png)
+![결과](C:/Users/black/Desktop/노재열/coding/javascript/jsStudy/sadwebcoder/Rohmixi/jsimages/2강/4.png)
 
 이처럼 __let__ 으로 변수를 선언하면 이후 추가로 선언하더라도 갱신되지 않는다.
 
@@ -250,7 +250,7 @@ console.log(name);
 name = "jisoo";
 console.log(name);
 ```
-![결과](C:/Users/black/Desktop/노재열/coding/javascript/jsimages/2강/5.png)
+![결과](C:/Users/black/Desktop/노재열/coding/javascript/jsStudy/sadwebcoder/Rohmixi/jsimages/2강/5.png)
 
 * ##### _Block-scope_
 
@@ -266,6 +266,6 @@ __var__ 은  이랑 달리 __let__ 은 `block-scope` 이다.
   }
   console.log(group);
 ```
-![결과](C:/Users/black/Desktop/노재열/coding/javascript/jsimages/2강/6.png)
+![결과](C:/Users/black/Desktop/노재열/coding/javascript/jsStudy/sadwebcoder/Rohmixi/jsimages/2강/6.png)
 
 만약 특정 변수를 `block` 안에서도 사용하고 싶다면 `block` 밖에서 작업하면 된다.
