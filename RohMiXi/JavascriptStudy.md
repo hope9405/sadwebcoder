@@ -39,6 +39,7 @@ console.log('Hello World!');
 이후 html을 크롬으로 실행 시킨 후 __`ctrl + shift + i`__ 로 개발자 도구를 활성화 시킨다.
 
 개발자 도구에서 Console창을 확인한다.
+
 ![개발자도구](./jsimages/1.png "콘솔창에서 Hello world가 출력된다. 또한 h의 값을 정해주고 h를 출력하면 지정 값이 도출된다.")
 
 
