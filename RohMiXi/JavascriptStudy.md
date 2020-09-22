@@ -39,7 +39,7 @@ console.log('Hello World!');
 이후 html을 크롬으로 실행 시킨 후 __`ctrl + shift + i`__ 로 개발자 도구를 활성화 시킨다.
 
 개발자 도구에서 Console창을 확인한다.
-![개발자도구](C:/Users/black/Desktop/노재열/coding/javascript/jsStudy/sadwebcoder/Rohmixi/jsimages/1.png "콘솔창에서 Hello world가 출력된다. 또한 h의 값을 정해주고 h를 출력하면 지정 값이 도출된다.")
+![개발자도구](./jsimages/1.png "콘솔창에서 Hello world가 출력된다. 또한 h의 값을 정해주고 h를 출력하면 지정 값이 도출된다.")
 
 
 <br>
@@ -269,3 +269,42 @@ __var__ 은  이랑 달리 __let__ 은 `block-scope` 이다.
 ![결과](C:/Users/black/Desktop/노재열/coding/javascript/jsStudy/sadwebcoder/Rohmixi/jsimages/2강/6.png)
 
 만약 특정 변수를 `block` 안에서도 사용하고 싶다면 `block` 밖에서 작업하면 된다.
+
+```javascript
+  let globalGroup = 'BTS';
+  {
+    let blockGroup = 'Twice';
+    console.log(globalGroup);
+    console.log(blockGroup);
+  }
+  console.log(globalGroup);
+  console.log(blockGroup);
+```
+![결과](C:/Users/black/Desktop/노재열/coding/javascript/jsStudy/sadwebcoder/Rohmixi/jsimages/2강/7.png)
+
+`global-scope(전역 스코프)` 에서 선언된 `globalGroup` 은 `block-scope` 안에서도 불러올 수 있지만, `block-scope` 에서 선언된 `blockGroup` 은 `block` 밖에서 정의되지 않아 불러올 수 없다.
+
+<br>
+
+#### 2-1-2. const
+
+<br>
+
+__const__ 또한 __var__ 을 보완하기 위해 추가된 변수 선언 방식이다.
+__const__ 가 __let__ 과 다른 점은 `immutable` 여부 차이이다. (참고로, `immutable` 은 변하지 않는 속성을 의미한다.)
+
+위에서 __let__ 은 재할당이 가능하다 설명했으나, __const__는 그것이 불가능하다.
+
+```Javascript
+  let name1 = 'jisoo';
+  const name2 = 'lisa';
+  console.log(name1, name2);
+
+  name1 = 'jennie';
+  name2 = 'rose';
+  console.log(name1, name2);
+```
+
+![결과](C:/Users/black/Desktop/노재열/coding/javascript/jsStudy/sadwebcoder/Rohmixi/jsimages/2강/8.png)
+
+위와 같이 __`Assignment to constant variable`__ 이라는 오류가 발생한다.
