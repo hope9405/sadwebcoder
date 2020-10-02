@@ -205,6 +205,7 @@
     이 경우 `===` 연산은 타입변환이 일어나지 않기 때문에 `let a` 와 `let b` 의 타입이 서로 달라 `false` 로 결과값이 나온다.
   <br>
     * Object equality by reference
+    
     ```javascript
     const jennie1 = { name: "jennie" };
     const jennie2 = { name: "jennie" };
