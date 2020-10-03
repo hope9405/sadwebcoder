@@ -16,4 +16,6 @@
 
 * ### 3강. 연산자(Operator)와 반복문(if, for loop)
 	* 3-1. 2강 부연설명
-	* 3-2. 3-2. 연산자(Operator)
+	* 3-2. 연산자(Operator)
+	* 3-3. 조건문 (Condition)
+	* 3-4. 반복문 (Loops)

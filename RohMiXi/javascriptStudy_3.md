@@ -205,7 +205,7 @@
     이 경우 `===` 연산은 타입변환이 일어나지 않기 때문에 `let a` 와 `let b` 의 타입이 서로 달라 `false` 로 결과값이 나온다.
   <br>
     * Object equality by reference
-    
+
     ```javascript
     const jennie1 = { name: "jennie" };
     const jennie2 = { name: "jennie" };
@@ -234,3 +234,172 @@
     기본적으로 `0`, `false`, `''`, `null`, `undefined` 모두 타입은 다르지만 `false` 값을 갖는다.
     따라서 `==` 연산의 경우 타입변환이 이루어지기에 `true`가 된다.
     `===` 연산의 경우 타입변환이 이루어 지지 않아 서로 타입이 다르기에 `false` 이다.
+
+    <br>
+
+
+### 3-3. 조건문 (Condition)
+
+  * #### if, else if, else
+
+    ```javascript
+    let name = "lisa";
+    if (name == "lisa") {
+      console.log(`name is ${name}`);
+    } else if (name == "jisoo") {
+      console.log(`name is ${name}`);
+    } else {
+      console.log("what the fuck!");
+    }
+
+    name = "jisoo";
+    if (name == "lisa") {
+      console.log(`name is ${name}`);
+    } else if (name == "jisoo") {
+      console.log(`name is ${name}`);
+    } else {
+      console.log("what the fuck!");
+    }
+
+    name = "twice";
+    if (name == "lisa") {
+      console.log(`name is ${name}`);
+    } else if (name == "jisoo") {
+      console.log(`name is ${name}`);
+    } else {
+      console.log("what the fuck!");
+    }
+    ```
+    ![결과](./jsimages/3강/17.png)
+
+    `name` 의 값만 바꾸고 if-else 조건문은 그대로 하고 실행하였다. `if` 와 `else if` 의 조건과 맞지 않은 경우 `what the fuck!` 이 출력된다.
+
+
+  * #### Ternary Operator '?'
+
+    `condition ? value1 : value2` 의 형태로 `if`조건문의 단축형으로 쓰인다.
+
+    ``` javascript
+    let a = 3;
+    let b = 6;
+    let c = a > b ? "a가 b보다 크다" : "a가 b보다 작다";
+    console.log(c);
+    a = 9;
+    c = a > b ? "a가 b보다 크다" : "a가 b보다 작다";
+    console.log(c);
+    ```
+    ![결과](./jsimages/3강/18.png)
+
+    이와 같이 처음의 조건대로 `a가 b보다 작다` 가 출력된 뒤, a 와 c 를 재할당 한 다음(a는 값을 변경하고 c는 동일하게) c를 출력하면 `a가 b보다 크다` 가 출력된다.
+
+  * #### Switch Statement
+
+    스위치 문은 다양한 `if` 조건을 걸 때 사용된다. 또는 `enum-like(열거형)` 값들을 체크하거나 타입스크립트에서 다양한 타입을 체크하기 위해서도 사용된다.
+
+    ```javascript
+      const name = jisoo;
+
+      switch(name) {
+        case 'jisoo' :
+          console.log('She is BLACKPINK');
+          break;
+        case 'yua' :
+          console.log('She is OH!MY GIRL');
+          break;
+      }
+    ```
+    ![결과](./jsimages/3강/19.png)
+    `const name` 을 `jisoo` 가 아니라 `yua` 로 한다면 `She is OH!MY GIRL` 이 출력된다.
+
+    <br>
+
+
+### 3-4. 반복문 (Loops)
+
+  * #### while 반복문
+
+    `while (조건) {실행내용}` 의 형태로 작성한다. `while` 반복문은 조건밖에 없기 때문에 몇번 반복될지 모르는 상황에서 사용하면 된다.
+
+    ```javascript
+      let a = 5;
+      while (a >0) {
+        console.log(a);
+        a--;
+      }
+    ```
+    ![결과](./jsimages/3강/20.png)
+
+    만약 실행을 먼저한 다음 조건을 확인하고 싶다면 `do while` 반복문을 이용한다.
+
+    ```javascript
+      let a = -1;
+      do {
+        console.log(a);
+        a--;
+      } while(a >0)
+    ```
+    ![결과](./jsimages/3강/21.png)
+
+    이처럼 `do while` 을 이용하면 body 부분이 최소 1회는 실행된다.
+
+    <br>
+
+  * #### for 반복문
+
+    `for(시작; 조건; 끝){실행내용}` 의 구조를 가진다. `for` 반복문의 실행 순서를 헷갈리지 말자.
+    ```javascript
+      for (let a = 1; a <5; a++) {
+        console.log(a);
+      }
+    ```
+    ![결과](./jsimages/3강/22.png)
+
+    위 결과에 보이듯 `for`반복문의 실행순서는 __`시작 - 조건 - 실행내용 - 끝`__ 의 순서이다.
+    `let a = 1` 으로 시작하여 `a < 5` 의 조건을 충족하여 `console.log(a)` 의 실행내용을 실행한 뒤에 `a++` 의 끝을 실행하고 반복한다.
+
+    * ##### for 반복문 안에 for 반복문
+
+    `for` 문 안에 `for` 문을 또 사용할 수 있다.
+    ```javascript
+      for(let a = 1; a <4; a ++) {
+        for (let b = 4; b > a; b--){
+          console.log(`b의 값은 ${b}이고 a의 값은 ${a}이라서 b가 a보다 크다.`)
+        }
+      }
+    ```
+    ![결과](./jsimages/3강/23.png)
+
+    이런 식으로 사용할 수는 있지만 굳이...? 연산이 많아져서 굳이 필요하지 않다면 효율적인 방법은 아니다.
+
+  * #### break, continue
+
+    반복문에서 `break` 를 통해 반복을 끝낼 수 있다.
+    반대로 `continue` 를 통해 현재 반복을 스킵하고 다음 반복문을 실행한다.
+
+    ``` javascript
+      // 짝수만 출력하는 문구 (continue)
+       for (let a = 0; a <10; a ++) {
+         if( a % 2 !==0) {
+           continue;
+         }
+         console.log(a);
+       }
+    ```
+    ![결과](./jsimages/3강/24.png)
+
+    위 경우 `continue` 를 통해 a 가 홀수인 경우를 스킵하고 짝수일 때 출력하게끔 작성할 수 있다.
+    
+    <br>
+
+    ``` javascript
+      // a 가 4 미만이 되면 출력하지 않는 문구 (break)
+      for (let a = 8; a > 0; a --) {
+        if (a < 4) {
+          break;
+        }
+        console.log(a);
+      }
+    ```
+    ![결과](./jsimages/3강/25.png)
+
+    위 경우 `break` 를 통해 a 가 4보다 작아지면 반복문을 종료할 수 있다.
