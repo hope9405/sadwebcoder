@@ -1,1 +1,3 @@
-# ming-jji
+# SQL튜닝
+1. SQL 튜닝
+2. NL JOIN, SORT MERGE JOIN, HASH JOIN, SEMI JOIN, 실행계획 읽는법 정리
