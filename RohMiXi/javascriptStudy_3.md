@@ -186,24 +186,34 @@
      console.log(`not a is ${!a}, not b is ${!b}`);
     ```
     ![결과](./jsimages/3강/13.png)  
+
       <br>
+
   * ##### Equality
+
     * __==__ : Loose Equality, with type conversion
+
     ``` javascript
       let a = 4 ;
       let b = '4';
       console.log(a == b);
     ```
     위와 같이 `let a` 는 `number` 이고 `let b` 는 `string` 이지만 `number` 로 타입변환이 일어나 `true` 로 결과값이 나온다.
-  <br>
-    * _===_ : Strict Equality, No type conversion
+
+    <br>
+
+    * __===__ : Strict Equality, No type conversion
+
     ``` javascript
       let a = 4 ;
       let b = '4';
       console.log(a === b);
     ```
+
     이 경우 `===` 연산은 타입변환이 일어나지 않기 때문에 `let a` 와 `let b` 의 타입이 서로 달라 `false` 로 결과값이 나온다.
-  <br>
+
+    <br>
+
     * Object equality by reference
 
     ```javascript
@@ -388,7 +398,7 @@
     ![결과](./jsimages/3강/24.png)
 
     위 경우 `continue` 를 통해 a 가 홀수인 경우를 스킵하고 짝수일 때 출력하게끔 작성할 수 있다.
-    
+
     <br>
 
     ``` javascript
