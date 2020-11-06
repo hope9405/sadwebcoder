@@ -247,11 +247,36 @@
     console.log(sumNum(1,3));
   ```
   ![결과](./jsimages/4강/12.png)
-
   로 동일하게 출력된다. 효율적 코딩을 위해 열심히 연마하자
 
+  <br>
 
-### 4-4. Callback function
+  - #### IIFE (Immediately Invoked Function Expression)
+
+  __IIFE__ 는 함수를 호출하지 않고 선언에서 바로 실행해보는 표현방식이다. 함수를 괄호`()` 로 감싸면 된다.
+
+  ``` javascript
+    function printGreet (name) {
+      console.log(`Hi, ${name}.`)
+    }
+
+    printGreet ('Jennie');
+  ```
+  위의 `printGreet` 함수를 `IIFE` 방식으로 표현하면 아래와 같다.
+
+  ```javascript
+    (function printGreet (name) {
+      console.log(`Hi, ${name}.`)
+    })('Jisoo')
+  ```
+  ![결과](./jsimages/4강/14.png)
+
+  굳이 자주 쓰이는 방식은 아니고, 그냥 함수를 확인할 때 쓰면 용이하다고 한다.
+
+  <br>
+
+
+### 4-6. Callback function
 
   콜백 함수 (Callback Function) 은 __어떤 이벤트가 발생한 경우, 실행되는 함수__ 이다. 아래 구문을 보자
 
@@ -282,3 +307,43 @@
   그렇다면 콜백 함수는 왜 쓰는 걸까? 본 강의에서 나오지는 않았지만 그 이유는 비동기처리 코딩을 위해서라고 한다. 이후 강의에서 비동기 코딩에 대해 나오니 기대하고 있자!   
 
   간단하게 찾아본 비동기처리란 _특정 코드의 연산이 끝날 때 까지 코드의 실행을 멈추지 않고 다음 코드를 먼저 실행하는 자바스크립트의 특성_ 이라고 한다. (출처 : https://joshua1988.github.io/web-development/javascript/javascript-asynchronous-operation/)
+
+
+### 4-7. Homework
+
+```
+function calculate (command, a, b)
+command : add, substract, divide, multiply, remainder
+```
+
+위의 조건을 만족하는 함수를 만들어 보자.
+
+```javascript
+
+  const add = 'add';
+  const multiply = 'multiply';
+  const substract = 'substract';
+  const divide = 'divide';
+  const remainder = 'remainder';
+
+  function calculate (command, a, b) {
+    if (command == 'add') {
+      return a + b;
+    } else if (command == 'substract') {
+      return a - b;
+    } else if(command == 'divide') {
+      return a / b;
+    } else if (command == 'multiply') {
+      return a * b;
+    } else if (command == 'remainder') {
+      return a % b;
+    } else {
+      console.log("!!!CHECK YOUR COMMAND!!!")
+    }
+  }
+
+
+console.log(  calculate('add', 5, 2));
+```
+
+내가 만든방식은 `if-else` 문으로 열심히 했다. 굳이 따지면 이상한건 아닌데, 굳이 변수를 정의하지 않고는 못할려나..?

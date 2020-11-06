@@ -19,3 +19,14 @@
 	* 3-2. 연산자(Operator)
 	* 3-3. 조건문 (Condition)
 	* 3-4. 반복문 (Loops)
+
+* ### 4강. 함수 기초 (Function Basic)
+	* 4-1. 함수 (Function)
+	* 4-2. 매개변수 (Parameters)
+	* 4-3. Local Scope
+	* 4-4. Return a value
+	* 4-5. Function Expression (함수 표현식)
+	* 4-6. Callback function
+	* 4-7. Homework
+
+* ### 5강. 클래스와 오브젝트의 차이 (Class vs Object)
